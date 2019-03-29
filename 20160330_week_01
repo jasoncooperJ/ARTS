@@ -1,0 +1,21 @@
+算法基础不好，从简单的开始。
+LeetCode 
+1. Two Sum
+
+c
+
+int* twoSum(int* nums, int numsSize, int target) {
+    static int targetArray[2] = {0};
+    for(int i = 0; i < numsSize - 1; i++){
+        for(int j = i + 1; j < numsSize; j++){
+            if(nums[i] + nums[j] == target){
+                targetArray[0] = i;
+                targetArray[1] = j;
+                return targetArray;
+            }
+        }
+    }
+    return 0;
+}
+
+
